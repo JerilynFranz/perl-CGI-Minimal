@@ -162,7 +162,8 @@ results (sorted by speed):
 =head1 CHANGES
 
  1.30 13 Jun 2020 - Maintainer update. Relicenced under the MIT License.
-                    Small tweaks to build process. No functional changes.
+                    Small tweaks to build process. Added meta_merge info
+                    for GitHub. No functional changes.
 
  1.29 21 Aug 2007 - Documentation fix to performance hints section. No functional changes.
 
@@ -741,7 +742,7 @@ Jerilyn Franz <cpan@jerilyn.info>
 
 =head1 VERSION
 
-Version 1.30 13 June 2020
+Version 1.30 13 Jun 2020
 
 =head1 COPYRIGHT
 
