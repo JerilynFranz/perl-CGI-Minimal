@@ -8,5 +8,11 @@ my $build = Module::Build->new
             'Carp' => 0,
             'perl' => '5.004',
         },
+
         build_requires => { },
+        meta_merge => {
+           resources => {
+              repository => 'https://github.com/JerilynFranz/perl-CGI-Minimal',
+           },
+        },
       )->create_build_script;
