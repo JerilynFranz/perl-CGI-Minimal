@@ -6,13 +6,21 @@ my $build = Module::Build->new
         license        => 'mit',
         requires       => {
             'Carp' => 0,
-            'perl' => '5.004',
         },
 
         build_requires => { },
         meta_merge => {
+          'meta-spec' => { version => 2 },
            resources => {
-              repository => 'https://github.com/JerilynFranz/perl-CGI-Minimal',
-           },
+              bugtracker => {
+                   web  => 'https://github.com/JerilynFranz/perl-CGI-Minimal/issues',
+               },
+               homepage => 'https://github.com/JerilynFranz/perl-CGI-Minimal',
+               repository => {
+                   type => 'git',
+                   url  => 'https://github.com/JerilynFranz/perl-CGI-Minimal.git',
+                   web  => 'https://github.com/JerilynFranz/perl-CGI-Minimal',
+               },
+            },
         },
       )->create_build_script;

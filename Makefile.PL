@@ -8,27 +8,24 @@ WriteMakefile(
                      'ZIP'=>'/usr/bin/zip','ZIPFLAGS'=>'-rl'},
     'PREREQ_PM'      => {
                             'Carp' => 0,
-                            'perl' => '5.004',
     }, 
+    META_MERGE => {
+       'meta-spec' => { version => 2 },
+        resources => {
+           bugtracker => {
+                web  => 'https://github.com/JerilynFranz/perl-CGI-Minimal/issues',
+            },
+            homepage => 'https://github.com/JerilynFranz/perl-CGI-Minimal',
+            repository => {
+                type => 'git',
+                url  => 'https://github.com/JerilynFranz/perl-CGI-Minimal.git',
+                web  => 'https://github.com/JerilynFranz/perl-CGI-Minimal',
+            },
+        },
+    },
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'lib/CGI/Minimal.pod', # retrieve abstract from module
        AUTHOR         => 'Jerilyn Franz <cpan@jerilyn.info>') : ()),
 
-    ($] >= 5.800 ?     ## Add these new keywords supported since 5.8
-      (NO_META    => 0,
-       META_MERGE => {
-          'meta-spec' => { version => 2 },
-           resources => {
-              bugtracker => {
-                   web  => 'https://github.com/JerilynFranz/perl-CGI-Minimal/issues',
-               },
-               homepage => 'https://github.com/JerilynFranz/perl-CGI-Minimal',
-               repository => {
-                   type => 'git',
-                   url  => 'https://github.com/JerilynFranz/perl-CGI-Minimal.git',
-                   web  => 'https://github.com/JerilynFranz/perl-CGI-Minimal',
-               },
-           },
-       }) : ()),
        PL_FILES       => {},
 );
